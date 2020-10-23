@@ -1,0 +1,21 @@
+<nav class="nav navbar-default" >
+  <div class="container-fluid" style="background-color: black">
+   <ul class ="nav navbar-nav">
+     <li routerLinkActive="active"><a routerLink="auth">Authentification</a></li>
+     <li routerLinkActive="active"><a routerLink="appareils">Appareils</a></li>
+   </ul>
+  </div>
+</nav>
+<body style="background-color: lightsteelblue" >
+  <div style="text-align: right">
+        <p>Vous êtes connecté depuis {{ secondes }} secondes !</p>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+</body>
