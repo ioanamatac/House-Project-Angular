@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # House-Project-AngularOCR
 >>>>>>> 512bf06bcc0e7491aa8596b0ebe67fb795012319
+# House-Project-Angular
