@@ -1,9 +1,14 @@
 import {Subject} from 'rxjs/Subject';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
 
+@Injectable()
 export class AppareilService{
 /* Quand vous déclarez un Subject, il faut dire quel type de données il gèrera*/
   appareilsSubjects = new Subject<any[]>();
 
+  constructor(private httpClient: HttpClient) {
+  }
   private appareils = [
     {
       id: 1,
@@ -65,6 +70,32 @@ export class AppareilService{
       appareilObject.id = this.appareils[(this.appareils.length - 1)].id + 1;
       this.appareils.push(appareilObject);
       this.emitAppareilsSubject();
+  }
+  saveAppareilsToServer(){
+      this.httpClient.put('https://house-back.firebaseio.com/appareils.json', this.appareils)
+        .subscribe(
+          () => {
+          console.log('Enregistrement terminé !');
+        },
+          (error) => {
+            console.log('Erreur de sauvegarde !' + error);
+          }
+        );
+  }
+  getAppareilsFromServer(){
+      this.httpClient
+        .get<any[]>('https://house-back.firebaseio.com/appareils.json')
+        .subscribe(
+          (response) => {
+          this.appareils = response;
+          this.emitAppareilsSubject();
+    },
+          (error ) => {
+            console.log('Erreur de chargement !' + error);
+          }
+        );
+
+
   }
 
 }
