@@ -12,7 +12,18 @@
         'coder',
         'la dégustation de cafe'
       ]
+    },
+    {
+      firstName: 'Ioana',
+      lastName: 'Matac',
+      email: 'asi_ioana@yahoo.com',
+      drinkPreference: 'jus d\' orange',
+      hobbies: [
+        'coder',
+        'la photographie'
+      ]
     }
+
   ];
   userSubject = new Subject<User[]>();
 
