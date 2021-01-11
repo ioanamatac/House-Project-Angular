@@ -7,8 +7,8 @@
 <a name="screenshot"></a>
 <a name="code scaffolding"></a>
 <a name="side information"></a>
-##General Info
-###Screenshot
+## General Info
+### Screenshot
 ![Image text](./src/HouseApp..jpg)
 (The electric devices in the house)
 
