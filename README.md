@@ -10,7 +10,7 @@
 ## General Info
 ### Screenshot
 ![Image text](./src/HouseApp..jpg)
-(The electric devices in the house)
+The electric devices in the house.
 
 Project carried out following the course Develop Web Applications with Angular followed at OpenClassrooms (https://openclassrooms.com)
 * A few words about the app:
@@ -21,9 +21,9 @@ Project carried out following the course Develop Web Applications with Angular f
     * email
     * favorite drink
     * hobbies 
-  * the users can be add (validators required, but not for the hobbies).  
+  * the users can be added (validators required, but not for the hobbies).  
   * after authentication, the electric devices can be viewed as a complete list and then individually.  
-  * the electric devices can be add/modify. 
+  * the electric devices can be added/modified. 
 * backend with the Google service: Firebase.This service allows the creation of a complete backend without coding, and node includes a lot of services, including authentication, a NoSQL database and file storage.
 
 ## Technologies
@@ -46,7 +46,7 @@ Project carried out following the course Develop Web Applications with Angular f
 
 ##  Side Information
 _Using the Google Service, Firebase:_
-1. after the settings into the Firebase (https://firebase.google.com), I added HttpClient into the app.module.ts
+1. After the settings into the Firebase (https://firebase.google.com), I added HttpClient into the app.module.ts
 2. @Injectable appareil.service.ts : 
   
   
