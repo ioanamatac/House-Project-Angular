@@ -1,4 +1,15 @@
-<h2>Appareil: {{ name }}</h2>
-<p> Statut:  {{ status }}</p>
-  <a routerLink="/appareils"> Retour à la liste </a>
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <div class="card-deck bg-dark text-white">
+        <div class="card-body flex-md-row-reverse">
+            <h3> {{ name }}</h3>
+            <h4> Statut: {{ status }}</h4>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div><a routerLink="/appareils"> Retour à la liste </a></div>
+</div>
+
 

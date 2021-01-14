@@ -1,7 +1,7 @@
 <script src="app.component.spec.ts"></script>
-<nav class="nav navbar-default" >
-  <div class="container-fluid" style="background-color: black">
-   <ul class ="nav navbar-nav">
+<nav class="navbar navbar btn-dark align-content-center">
+  <div class="container-fluid">
+   <ul class ="nav navbar-nav align-content-center flex-md-row-reverse" >
      <li routerLinkActive="active"><a routerLink="auth">Authentification</a></li>
      <li routerLinkActive="active"><a routerLink="appareils">Appareils</a></li>
      <li routerLinkActive="active"><a routerLink="edit">Nouvel appareil</a></li>
@@ -9,16 +9,15 @@
    </ul>
   </div>
 </nav>
-<body style="background-color: lightsteelblue" >
-  <div style="text-align: right">
-        <p>Vous êtes connecté depuis {{ secondes }} secondes !</p>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <router-outlet></router-outlet>
+<body >
+    <div style="text-align: right">
+          <p>Vous êtes connecté depuis {{ secondes }} secondes !</p>
     </div>
-  </div>
-</div>
+
+     <div class="card-group">
+      <div class="">
+        <router-outlet></router-outlet>
+      </div>
+     </div>
 </body>

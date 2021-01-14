@@ -15,7 +15,7 @@ export class UserListComponent implements OnInit, OnDestroy {
       lastName: 'Alexander',
       email: 'will@alexander.com',
       drinkPreference: 'jus d\'orange',
-      hobbies:[
+      hobbies: [
         'coder',
         'la degustation de cafè '
       ]
@@ -33,7 +33,7 @@ export class UserListComponent implements OnInit, OnDestroy {
     );
     this.userService.emitUsers();
   }
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.userSubscription.unsubscribe();
   }
 

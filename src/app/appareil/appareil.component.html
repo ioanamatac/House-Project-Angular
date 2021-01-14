@@ -1,16 +1,32 @@
-<li [ngClass]="{'list-group-item': true,
-                'list-group-item-success': appareilStatus === 'allumé',
-                'list-group-item-danger': appareilStatus === 'éteint'}">
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item">
+    <div class="card-deck bg-dark text-white">
+      <div class="card-body flex-md-row-reverse">
+            <div [ngClass]="{ 'card': true,
+                      'card-success': appareilStatus === 'allumé',
+                      'card-danger': appareilStatus === 'éteint' }">
+            </div>
+          <h3 [ngStyle]="{color: getColor()}"> {{ appareilName }} </h3>
+          <h4> Statut: {{ getStatus() }} </h4>
+          <h5> Mis à jour: {{ lastUpdate | async | date: 'short' }} </h5>
+          <a [routerLink] ="[id]">Detail </a>
 
-  <h4 [ngStyle]="{color: getColor()}">Appareil: {{ appareilName }} --Statut: {{ getStatus() }} --Mis à jour: {{ lastUpdate | async | date: 'short' }}</h4>
-  <a [routerLink] ="[id]">Detail </a>
-  <input type="text" class="form-control" [(ngModel)]="appareilName">
+          <button class="btn btn-sm btn-success"
+                  (click)="onSwitchOne()"
+                  [disabled]="appareilStatus=== 'allumé'">Allumer</button>
+          <button class="btn btn-sm btn-danger"
+                  [disabled]="appareilStatus=== 'éteint'"
+                  (click)="onSwitchOff()">Eteindre</button>
 
-  <button class="btn btn-sm btn-success"
-          (click)="onSwitchOne()"
-          [disabled]="appareilStatus=== 'allumé'">Allumer</button>
-  <button class="btn btn-sm btn-danger"
-          [disabled]="appareilStatus=== 'éteint'"
-          (click)="onSwitchOff()">Eteindre</button>
+         </div>
+      </div>
+    </li>
+  </ul>
+</div>
 
-</li>
+
+
+
+
+

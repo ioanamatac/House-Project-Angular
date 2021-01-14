@@ -9,7 +9,7 @@
 <a name="side information"></a>
 ## General Info
 ### Screenshot
-![Image text](./src/HouseApp..jpg)
+![Image text](./src/vue_mes_appareils.jpg)
 The electric devices in the house.
 
 Project carried out following the course Develop Web Applications with Angular followed at OpenClassrooms (https://openclassrooms.com)

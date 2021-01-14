@@ -32,7 +32,7 @@
         if (this.appareilStatus === 'allumé'){
           return 'green'; }
         else if (this.appareilStatus === 'eteint'){
-          return  'salmon'; }
+          return  'red'; }
       }
 
       onSwitchOne(){
